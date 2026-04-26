@@ -32,12 +32,12 @@ app.use(flash());
 app.use((req, res, next) => {
     res.locals.messages = req.flash();
     res.locals.user = req.session.user || null;
-    res.locals.title = 'Shortz-App-TDD';
+    res.locals.title = 'GameVault';
     next();
 });
 
 // Rotas (vamos adicionar mais depois)
-app.get('/', (req, res) => res.render('index', { title: 'Shortz-App-TDD' }));
+app.get('/', (req, res) => res.render('index', { title: 'GameVault' }));
 // 404
 app.use((req, res) => res.status(404).render('error'));
 export default app;
