@@ -21,6 +21,8 @@ body {
     padding: 0 24px;
     color: white;
     border-bottom: 1px solid #2d343f;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 /* Lado Esquerdo: Logo */
