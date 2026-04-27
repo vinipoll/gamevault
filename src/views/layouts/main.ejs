@@ -8,10 +8,16 @@
         <%= title || 'GameVault | Seu Catálogo de Jogos' %>
     </title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <%- body %>
+    <%- include("../partials/navbar") %>
+
+    <main>
+        <%- body %>
+    </main>
+    
 </body>
 
 </html>
