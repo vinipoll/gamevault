@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0f1115;
+    /* Fundo escuro para contraste */
+    padding: 20px;
+}
+
+/* Estilo do Menu Superior (Header) */
+.game-header {
+    background-color: #1a1d23;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    color: white;
+    border-bottom: 1px solid #2d343f;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Lado Esquerdo: Logo */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre o dragão e o texto */
+    text-decoration: none !important; /* Remove o sublinhado */
+}
+
+/* Centro: Navegação */
+.nav-center {
+    display: flex;
+    gap: 24px;
+    height: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link.active {
+    color: #e63946;
+}
+
+/* Linha vermelha embaixo do item ativo */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e63946;
+}
+
+
+/*notificação*/
+.notification-container {
+    position: relative;
+    padding: 5px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: #ffffff;
+}
+
+/* O Badge (Círculo vermelho) */
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e63946;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    border: 2px solid #111827; /* Cor do fundo da navbar para dar contraste */
+}
+
+/* Efeito de balanço ao passar o mouse */
+.icon-btn:hover .fa-bell {
+    animation: ring 0.5s ease;
+}
+
+@keyframes ring {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0); }
+}
+
+/*Perfil*/
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.profile-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-image: url('https://i.pravatar.cc/100?u=gamevault');
+    /* Imagem de exemplo */
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #3f444e;
+}
+
+.user-name {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.arrow-down {
+    font-size: 10px;
+    color: #9ca3af;
+}
